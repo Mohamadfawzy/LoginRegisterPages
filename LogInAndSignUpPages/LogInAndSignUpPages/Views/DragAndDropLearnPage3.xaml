@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LogInAndSignUpPages.Views.DragAndDropLearnPage3"
+             BackgroundColor="Gray">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <Label  Text="Answer the following question by dragging your answer to the Entry." />
+            <Label Text="What's 2+2?" />
+            <Grid ColumnDefinitions="0.5*, 0.5*"
+                  Margin="0,20,0,0">
+                <Label Text="Ahamed"
+                       HorizontalOptions="Center">
+                    <Label.GestureRecognizers>
+                        <DragGestureRecognizer />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label Grid.Column="1"
+                       Text="Mohamed"
+                       HorizontalOptions="Center">
+                    <Label.GestureRecognizers>
+                        <DragGestureRecognizer />
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+            <Entry Margin="0,20,0,0"
+                   Placeholder="Drag your answer here">
+                <Entry.GestureRecognizers>
+                    <DropGestureRecognizer DragOver="OnDropGestureRecognizerDragOver"
+                                           Drop="OnDropGestureRecognizerDrop" />
+                </Entry.GestureRecognizers>
+            </Entry>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

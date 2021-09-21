@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LogInAndSignUpPages.MainPage"
+             BackgroundColor="Green"
+             xmlns:FontAwesome="clr-namespace:LogInAndSignUpPages.Fonts"
+             xmlns:entry="clr-namespace:LogInAndSignUpPages.Controllers"
+             xmlns:frame="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:behavior="clr-namespace:LogInAndSignUpPages.Behaviours"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:vm="clr-namespace:LogInAndSignUpPages.ViewModels"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.BindingContext>
+        <vm:MainVM />
+    </ContentPage.BindingContext>
+    <StackLayout VerticalOptions="FillAndExpand">
+        <ScrollView VerticalOptions="FillAndExpand"
+                    VerticalScrollBarVisibility="Never">
+            <AbsoluteLayout x:Name="AbsoluteContener"
+                            VerticalOptions="FillAndExpand">
+                <!-- Section 1 form for email and password -->
+                <Grid RowDefinitions="Auto,0"
+                      RowSpacing="0"
+                      VerticalOptions="Start"
+                      AbsoluteLayout.LayoutBounds="0,0,1,0.67"
+                      AbsoluteLayout.LayoutFlags="All">
+                    <!-- Image Background -->
+                    <Image x:Name="ImageBackground"
+                           Grid.Row="0"
+                           Grid.RowSpan="2"
+                           Source="library1.jpg"
+                           Aspect="AspectFill" />
+                    <!-- shado -->
+                    <StackLayout x:Name="Shado"
+                                 Grid.Row="0"
+                                 Spacing="0"
+                                 Margin="0"
+                                 Padding="0"
+                                 VerticalOptions="FillAndExpand">
+                        <StackLayout.Background>
+                            <LinearGradientBrush StartPoint="0,0"
+                                                 EndPoint="0,1">
+                                <GradientStop Color="Transparent"
+                                              Offset="0" />
+                                <GradientStop Color="#d1000000"
+                                              Offset="1" />
+                            </LinearGradientBrush>
+                        </StackLayout.Background>
+                    </StackLayout>
+                    <!-- fildes Box and logo -->
+                    <StackLayout x:Name="FildesBox"
+                                 Grid.Row="0"
+                                 Margin="25,10"
+                                 VerticalOptions="Center">
+                        <Grid BackgroundColor="Transparent"
+                              Margin="0,0,0,20">
+                            <frame:PancakeView BackgroundColor="White"
+                                               HorizontalOptions="FillAndExpand"
+                                               CornerRadius="10"
+                                               Padding="0"
+                                               VerticalOptions="Start">
+                                <StackLayout Padding="10,10"
+                                             Spacing="15"
+                                             Margin="0,0"
+                                             BackgroundColor="White"
+                                             VerticalOptions="Start">
+                                    <!-- logo -->
+                                    <Frame x:Name="logo"
+                                           Grid.Row="0"
+                                           Margin="0,20,0,40"
+                                           Padding="0"
+                                           HasShadow="False"
+                                           IsClippedToBounds="True"
+                                           BackgroundColor="Azure"
+                                           CornerRadius="10"
+                                           BorderColor="{StaticResource KashmirBlue}"
+                                           HeightRequest="70"
+                                           WidthRequest="70"
+                                           VerticalOptions="Start"
+                                           HorizontalOptions="Center">
+                                        <Image Source="logo" />
+                                    </Frame>
+                                    <!-- Text Login-->
+                                    <!--<frame:PancakeView>
+                                        <Label Text="LOGIN"
+                                                x:Name="login"
+                                                x:FieldModifier="public"
+                                                Margin="20,10"
+                                                HorizontalOptions="Center" />
+                                    </frame:PancakeView>-->
+                                    <!-- Email -->
+                                    <Grid HeightRequest="55"
+                                          x:Name="GridForUsername"
+                                          Margin="0">
+                                        <frame:PancakeView BackgroundColor="White"
+                                                           x:Name="pancakView"
+                                                           HorizontalOptions="FillAndExpand"
+                                                           Border="{frame:BorderMarkup Color=LightGray, Thickness=2}"
+                                                           CornerRadius="10"
+                                                           Padding="0"
+                                                           Margin="0,0">
+                                            <entry:CustomEntry  x:Name="EntryEmail"
+                                                                TextColor="Black"
+                                                                Margin="10,0"
+                                                                BackgroundColor="White"
+                                                                Keyboard="Email"
+                                                                Focused="Entry_Focused"
+                                                                Unfocused="Entry_Unfocused">
+                                            </entry:CustomEntry>
+                                        </frame:PancakeView>
+                                        <Label x:Name="NameFiled"
+                                               Text="Enter Email"
+                                               TextColor="Gray"
+                                               BackgroundColor="White"
+                                               HorizontalOptions="Start"
+                                               HorizontalTextAlignment="Center"
+                                               VerticalOptions="Center"
+                                               VerticalTextAlignment="Center"
+                                               Padding="10,0"
+                                               Margin="15,0">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="TapFocusOnEmail" />
+                                            </Label.GestureRecognizers>
+                                        </Label>
+                                    </Grid>
+                                    <!-- Password-->
+                                    <Grid HeightRequest="55"
+                                          Margin="0">
+                                        <frame:PancakeView BackgroundColor="White"
+                                                           x:Name="pancakView1"
+                                                           HorizontalOptions="FillAndExpand"
+                                                           Border="{frame:BorderMarkup Color=LightGray, Thickness=2}"
+                                                           CornerRadius="10"
+                                                           Padding="0"
+                                                           Margin="0,0">
+
+                                            <entry:CustomEntry TextColor="Black"
+                                                               Margin="10,0,45,0"
+                                                               BackgroundColor="White"
+                                                               Focused="Entry_Focused"
+                                                               Unfocused="Entry_Unfocused"
+                                                               IsPassword="True">
+                                            </entry:CustomEntry>
+                                        </frame:PancakeView>
+                                        <Label Text="Password"
+                                               TextColor="Gray"
+                                               BackgroundColor="White"
+                                               HorizontalOptions="Start"
+                                               HorizontalTextAlignment="Center"
+                                               VerticalOptions="Center"
+                                               VerticalTextAlignment="Center"
+                                               Padding="10,0"
+                                               Margin="15,0">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="TapFocusOnEmail" />
+                                            </Label.GestureRecognizers>
+                                        </Label>
+                                        <!--Eye icon -->
+                                        <Label x:Name="EyePassword"
+                                               Text="{x:Static FontAwesome:IconFont.EyeOff}"
+                                               Padding="10,8"
+                                               FontFamily="IconFont"
+                                               Margin="20,0"
+                                               FontSize="20"
+                                               TextColor="Gray"
+                                               HorizontalOptions="EndAndExpand"
+                                               VerticalOptions="Center">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="Tap_EyePassword" />
+                                            </Label.GestureRecognizers>
+                                        </Label>
+                                    </Grid>
+                                </StackLayout>
+                            </frame:PancakeView>
+                        </Grid>
+                    </StackLayout>
+                </Grid>
+                <!-- background Kashmir_Blue color and  inside it Button Login-->
+                <StackLayout Grid.Row="1"
+                             BackgroundColor="{StaticResource KashmirBlue}"
+                             HorizontalOptions="FillAndExpand"
+                             AbsoluteLayout.LayoutBounds="1,1,1,0.33"
+                             AbsoluteLayout.LayoutFlags="All">
+                    <Button Text="LOGIN"
+                            FontSize="18"
+                            TextColor="{StaticResource KashmirBlue}"
+                            FontAttributes="Bold"
+                            BackgroundColor="White"
+                            Margin="25,-10,25,25"
+                            Padding="0,20"
+                            CornerRadius="5"
+                            Clicked="Button_Clicked" />
+                </StackLayout>
+                <!-- lable Don't have and account? -->
+                <StackLayout Orientation="Horizontal"
+                             Margin="30"
+                             HorizontalOptions="Center"
+                             AbsoluteLayout.LayoutBounds="0.5,1"
+                             AbsoluteLayout.LayoutFlags="PositionProportional">
+                    <Label Text="Don't have an account?"
+                           TextColor="White">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label Text="SiGNUP"
+                           Padding="7,0"
+                           x:Name="sigup"
+                           TextColor="White"
+                           FontAttributes="Bold"
+                           xct:TouchEffect.AnimationDuration="100"
+                           xct:TouchEffect.PressedBackgroundColor="#60000000"
+                           xct:TouchEffect.NormalBackgroundColor="Transparent"
+                           xct:TouchEffect.PressedOpacity="1"
+                           xct:TouchEffect.PressedScale="0.95"
+                           xct:TouchEffect.AnimationEasing="{x:Static Easing.SinOut}"
+                           >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Tap_GoTo_SignUp" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+                <!-- Stack Heep Me Logged -->
+                <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="Fill"
+                             Padding="10,0"
+                             Margin="10,0"
+                             AbsoluteLayout.LayoutBounds="0,0.87"
+                             AbsoluteLayout.LayoutFlags="PositionProportional">
+                    <!-- CheckboxBlankCircle CheckCircleOutline -->
+                    <!-- {x:Static FontAwesome:IconFont.CheckCircle} -->
+                    <Label x:Name="CheckBoxCircal"
+                           Text="{Binding  KeepMeLogged}"
+                           FontFamily="IconFont"
+                           Padding="0"
+                           TextColor="White"
+                           VerticalOptions="Center" />
+                    <!-- Keep me logged in -->
+                    <Label Text="Keep me logged in"
+                           Padding="5,0"
+                           TextColor="White"
+                           HorizontalOptions="StartAndExpand"
+                           VerticalOptions="Center"
+                           xct:TouchEffect.AnimationDuration="250"
+                           xct:TouchEffect.AnimationEasing="{x:Static Easing.SinInOut}"
+                           xct:TouchEffect.NormalBackgroundColor="Transparent"
+                           xct:TouchEffect.PressedBackgroundColor="#41000000"
+                           xct:TouchEffect.PressedOpacity="0.6"
+                           xct:TouchEffect.PressedScale="0.95"
+                           xct:TouchEffect.Command="{Binding KeepMeLoggedCommand}" />
+                </StackLayout>
+                <!-- Backgroun When Flaying Run -->
+                <StackLayout x:Name="BackgrounWhenFlaing"
+                             IsVisible="false"
+                             AnchorY="0.5"
+                             AbsoluteLayout.LayoutBounds="1,1,1,1"
+                             AbsoluteLayout.LayoutFlags="All"
+                             BackgroundColor="#99000000"
+                             Opacity="0">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapFlyingOut" />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                    <!-- Popup For Forgot Password -->
+                <frame:PancakeView x:Name="PopupForgotPass"
+                                   IsVisible="false"
+                                   BackgroundColor="{StaticResource KashmirBlue}"
+                                   HeightRequest="20"
+                                   WidthRequest="60"
+                                   CornerRadius="7"
+                                   AbsoluteLayout.LayoutBounds="1,0.87"
+                                   AbsoluteLayout.LayoutFlags="PositionProportional">
+                        <StackLayout x:Name="StackInsideFlayingForgotPass">
+                            <!-- close icon -->
+                            <Label Text="{x:Static FontAwesome:IconFont.Close}"
+                                   Padding="10"
+                                   BackgroundColor="Transparent"
+                                   FontFamily="IconFont"
+                                   TextColor="OrangeRed"
+                                   FontSize="24"
+                                   xct:TouchEffect.AnimationDuration="100"
+                                   xct:TouchEffect.PressedBackgroundColor="#60000000"
+                                   xct:TouchEffect.NormalBackgroundColor="Transparent"
+                                   xct:TouchEffect.PressedOpacity="1"
+                                   xct:TouchEffect.PressedScale="0.70"
+                                   xct:TouchEffect.AnimationEasing="{x:Static Easing.SinOut}">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapFlyingOut" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <ScrollView Padding="20"
+                                        VerticalScrollBarVisibility="Never">
+                                <StackLayout Scale="1"
+                                             Padding="0,10,0,0"
+                                             Spacing="25">
+                                    <Label Text="Can't log in?"
+                                           HorizontalOptions="Center"
+                                           FontSize="Large" />
+                                    <Label Text="We'll send a verification code"
+                                           FontSize="Medium" />
+                                    <!-- Email -->
+                                    <Grid HeightRequest="55"
+                                          Margin="0">
+                                        <!-- fram for Entry -->
+                                        <frame:PancakeView Padding="10,5,5,5"
+                                                           CornerRadius="5"
+                                                           Border="{frame:BorderMarkup Color=LightGray, Thickness=1}">
+                                            <entry:CustomEntry   x:Name="EntryEmailPopup"
+                                                                 FontSize="Body"
+                                                                 Keyboard="Email"
+                                                                 PlaceholderColor="{AppThemeBinding Light={StaticResource MainLabelColorLight}, Dark= {StaticResource MainLabelColorDark}}"
+                                                                 TextColor="{AppThemeBinding Light={StaticResource MainLabelColorLight}, Dark= {StaticResource MainLabelColorDark}}"
+                                                                 Focused="Entry_Focused"
+                                                                 Unfocused="Entry_Unfocused">
+                                            </entry:CustomEntry>
+                                        </frame:PancakeView>
+                                        <Label Text="Enter Email"
+                                               TextColor="White"
+                                               BackgroundColor="{StaticResource KashmirBlue}"
+                                               HorizontalOptions="Start"
+                                               HorizontalTextAlignment="Center"
+                                               VerticalOptions="Center"
+                                               VerticalTextAlignment="Center"
+                                               Padding="10,0"
+                                               Margin="15,0">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="TapFocusOnEmail" />
+                                            </Label.GestureRecognizers>
+                                        </Label>
+                                    </Grid>
+                                    <Button Text="Send Verification Code"
+                                            BackgroundColor="LightSeaGreen"
+                                            TextColor="White"
+                                            FontSize="Body"
+                                            FontAttributes="Bold"
+                                            TextTransform="None"
+                                            Padding="15"
+                                            CornerRadius="7" />
+                                    <BoxView Color="Gray"
+                                             CornerRadius="2"
+                                             HeightRequest="1"
+                                             HorizontalOptions="Fill"
+                                             VerticalOptions="Center" />
+                                    <Label HorizontalOptions="Center"
+                                           FontSize="Body">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <FormattedString.Spans>
+                                                    <Span  Text="Return to "
+                                                           FontSize="Body" />
+                                                    <Span Text="log in"
+                                                          FontSize="Body"
+                                                          FontAttributes="Bold" />
+                                                </FormattedString.Spans>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer  Tapped="Tap_ReturnToLogIn" />
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                </StackLayout>
+                        </ScrollView>   
+                    </StackLayout>
+                    <frame:PancakeView.GestureRecognizers>
+                        <TapGestureRecognizer />
+                    </frame:PancakeView.GestureRecognizers>
+                </frame:PancakeView>
+                <!-- Label Forgot password? -->
+                <Label x:Name="ForgotPass"
+                       Text="Forgot password?"
+                       VerticalOptions="Center"
+                       TextColor="#FFFFFF"
+                       Padding="20,0"
+                       AbsoluteLayout.LayoutBounds="1,0.87"
+                       AbsoluteLayout.LayoutFlags="PositionProportional"
+                       xct:TouchEffect.AnimationDuration="250"
+                       xct:TouchEffect.AnimationEasing="{x:Static Easing.SinInOut}"
+                       xct:TouchEffect.NormalBackgroundColor="Transparent"
+                       xct:TouchEffect.PressedBackgroundColor="#41000000"
+                       xct:TouchEffect.PressedOpacity="0.6"
+                       xct:TouchEffect.PressedScale="0.95"
+                       xct:TouchEffect.Command="{Binding KeepMeLoggedCommand}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapFlyingIn" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <!-- -->
+                <BoxView x:Name="FlyingBox"
+                         IsVisible="false"
+                         Color="Transparent"
+                         HeightRequest="30"
+                         WidthRequest="30"
+                         AbsoluteLayout.LayoutBounds="0.5,0.5,.9,.6"
+                         AbsoluteLayout.LayoutFlags="All" />
+            </AbsoluteLayout>
+        </ScrollView>
+    </StackLayout>
+    <!--<Label Text="الحمد لله رب العالمين"
+                               FontFamily="Lotus"
+                               FontSize="Large" />
+                        <Label Text="{x:Static FontAwesome:IconFont.ThumbUp}"
+                               FontFamily="IconFont"
+                               Padding="10"
+                               FontSize="40"
+                               TextColor="LightBlue"
+                               HorizontalOptions="Start" />-->
+</ContentPage>

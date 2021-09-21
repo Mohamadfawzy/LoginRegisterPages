@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LogInAndSignUpPages.Views.MultiColor⁯Page"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <!--#region -->
+
+            <!-- Polygon  -->
+            <Polygon Points="0,0 0,100 100,100 100,50 "
+                     Margin="0"
+                     Aspect="Fill"
+                     IsVisible="true"
+                     HorizontalOptions="Fill"
+                     VerticalOptions="Fill"
+                     Fill="White"
+                     StrokeThickness="0"
+                     AbsoluteLayout.LayoutBounds="0,1,1,0.40"
+                     AbsoluteLayout.LayoutFlags="All" />
+            <Polygon Points="0,0 0,80 100,100 100,0"
+                     Margin="0"
+                     Aspect="Fill"
+                     IsVisible="true"
+                     HorizontalOptions="Fill"
+                     VerticalOptions="Fill"
+                     Fill="#F2C185"
+                     StrokeThickness="0"
+                     AbsoluteLayout.LayoutBounds="0,0,1,0.85"
+                     AbsoluteLayout.LayoutFlags="All" />
+            <Polygon Points="0,0 0,100 100,50 100,0"
+                     Margin="0"
+                     Aspect="Fill"
+                     IsVisible="true"
+                     HorizontalOptions="Fill"
+                     VerticalOptions="Fill"
+                     Fill="#324A59"
+                     StrokeThickness="0"
+                     AbsoluteLayout.LayoutBounds="0,0,1,0.55"
+                     AbsoluteLayout.LayoutFlags="All" />
+            <Polygon Points="0,0 50,0 0,100"
+                     Margin="0"
+                     IsVisible="true"
+                     Aspect="Fill"
+                     HorizontalOptions="Fill"
+                     VerticalOptions="FillAndExpand"
+                     Fill="Salmon"
+                     StrokeThickness="0"
+                     AbsoluteLayout.LayoutBounds="0,0,0.20,0.30"
+                     AbsoluteLayout.LayoutFlags="All" />
+            <!--#endregion-->
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

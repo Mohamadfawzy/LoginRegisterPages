@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:frame="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:behavior="clr-namespace:LogInAndSignUpPages.Behaviours"
+             xmlns:FontAwesome="clr-namespace:LogInAndSignUpPages.Fonts"
+             xmlns:entry="clr-namespace:LogInAndSignUpPages.Controllers"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="LogInAndSignUpPages.Views.RegisterPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="Red">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label"
+                   x:Key="HeaderLabel">
+                <Setter Property="TextColor"
+                        Value="Black" />
+                <Setter Property="FontSize"
+                        Value="35" />
+                <Setter Property="Padding"
+                        Value="10,0" />
+                <Setter Property="Margin"
+                        Value="0" />
+                <Setter Property="HorizontalOptions"
+                        Value="Start" />
+                <Setter Property="FontAttributes"
+                        Value="Bold" />
+            </Style>
+            <!-- Box View-->
+            <Style TargetType="BoxView"
+                   x:Key="BoxViewForEntryGray">
+                <Setter Property="Color"
+                        Value="LightGray" />
+                <Setter Property="HeightRequest"
+                        Value="2" />
+                <Setter Property="HorizontalOptions"
+                        Value="Fill" />
+                <Setter Property="Grid.Row"
+                        Value="1" />
+                <Setter Property="AnchorX"
+                        Value="1" />
+                <Setter Property="ScaleX"
+                        Value="0" />
+            </Style>
+            <Style TargetType="BoxView"
+                   x:Key="BoxViewForEntryBlack">
+                <Setter Property="Color"
+                        Value="Black" />
+                <Setter Property="HeightRequest"
+                        Value="2" />
+                <Setter Property="HorizontalOptions"
+                        Value="Fill" />
+                <Setter Property="Grid.Row"
+                        Value="1" />
+                <Setter Property="ScaleX"
+                        Value="0" />
+                <Setter Property="AnchorX"
+                        Value="0" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid x:Name="MainGrid" VerticalOptions="FillAndExpand">
+            <ScrollView Grid.Row="0"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+                <Grid RowDefinitions="60,*,*"
+                      x:Name="MainAbsoluteLayout"
+                      VerticalOptions="FillAndExpand">
+                    <!-- shado -->
+                    <StackLayout x:Name="Shado"
+                                 IsVisible="true"
+                                 Spacing="0"
+                                 Margin="0"
+                                 Padding="0"
+                                 Grid.Row="0"
+                                 Grid.RowSpan="3"
+                                 AbsoluteLayout.LayoutBounds="1,1,1,1"
+                                 AbsoluteLayout.LayoutFlags="All">
+                        <StackLayout.Background>
+                            <LinearGradientBrush StartPoint="0,0"
+                                                 EndPoint="0,1">
+                                <GradientStop Color="White"
+                                              Offset="0" />
+                                <GradientStop Color="#ffffff"
+                                              Offset="1" />
+                            </LinearGradientBrush>
+                        </StackLayout.Background>
+                    </StackLayout>
+                    <!-- content section 1 -->
+                    <StackLayout x:Name="StackEntrys"
+                                 Grid.Row="1"
+                                 Padding="0"
+                                 Margin="40,0,0,50"
+                                 Spacing="10"
+                                 HorizontalOptions="Fill"
+                                 AbsoluteLayout.LayoutBounds="0,0.2,1,1"
+                                 AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional">
+                        <!-- logo -->
+                        <Frame x:Name="logo"
+                               Margin="0,0,0,20"
+                               Padding="0"
+                               HasShadow="False"
+                               IsClippedToBounds="True"
+                               BackgroundColor="Azure"
+                               CornerRadius="7"
+                               BorderColor="{StaticResource KashmirBlue}"
+                               VerticalOptions="Start"
+                               HorizontalOptions="Start">
+                            <Image Source="logo"
+                                   HorizontalOptions="Start"
+                                   VerticalOptions="Start"
+                                   HeightRequest="70"
+                                   WidthRequest="70" />
+                        </Frame>
+                        <!-- Hello -->
+                        <Label Text="Hello!"
+                               Padding="0"
+                               Style="{StaticResource HeaderLabel}" />
+                        <Grid>
+                            <!-- Lets introduce -->
+                            <Label x:Name="LblIntroduce"
+                                   Text="Lets introduce"
+                                   Margin="0,10,0,20"
+                                   FontSize="26"
+                                   FontAttributes="None"
+                                   TextColor="DarkGray"
+                                   Padding="0"
+                                   TranslationX="250"
+                                   Opacity="1"
+                                   Style="{StaticResource HeaderLabel}" />
+                            <!-- The name that will write it user -->
+                            <Label x:Name="LblNameUserWrite"
+                                   IsVisible="true"
+                                   Text=""
+                                   Margin="0,10,0,20"
+                                   FontSize="26"
+                                   FontAttributes="None"
+                                   TextColor="DarkGray"
+                                   Padding="0"
+                                   TranslationX="250"
+                                   Opacity="0"
+                                   Style="{StaticResource HeaderLabel}" />
+                        </Grid>
+                        <!-- -->
+                        <!--#region  deleted absoute-->
+                        <!-- Is visible false -->
+                        <!--<AbsoluteLayout IsVisible="false" HeightRequest="160">
+                                <StackLayout IsVisible="true"
+                                             Spacing="0"
+                                             HorizontalOptions="FillAndExpand"
+                                             AbsoluteLayout.LayoutBounds="0,0,1,160"
+                                             AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional">
+                                    -->
+                        <!-- Name -->
+                        <!--
+                                    <entry:CustomEntry Placeholder="Name"
+                                                       HeightRequest="80"
+                                                       Focused="CustomEntry_Focused"
+                                                       Unfocused="CustomEntry_Unfocused" />
+                                    -->
+                        <!-- Email -->
+                        <!--
+                                    <entry:CustomEntry Placeholder="Email"
+                                                       HeightRequest="80"
+                                                       VerticalOptions="StartAndExpand"
+                                                       Focused="CustomEntry_Focused"
+                                                       Unfocused="CustomEntry_Unfocused" />
+                                </StackLayout>
+                                -->
+                        <!-- box gray -->
+                        <!--
+                                <StackLayout Margin="0,0,0,15" 
+                                             Spacing="0"
+                                             Padding="0"
+                                             HorizontalOptions="FillAndExpand"
+                                             AbsoluteLayout.LayoutBounds="0,1,1,95"
+                                             AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional">
+                                    <BoxView VerticalOptions="StartAndExpand"
+                                             Style="{StaticResource BoxViewForEntryGray}" />
+                                    <BoxView VerticalOptions="EndAndExpand" Style="{StaticResource BoxViewForEntryGray}" />
+                                </StackLayout>
+                                -->
+                        <!-- box black-->
+                        <!--
+                                <StackLayout Margin="0,0,0,15"
+                                             Spacing="0"
+                                             Padding="0"
+                                             HorizontalOptions="FillAndExpand"
+                                             AbsoluteLayout.LayoutBounds="0,1,1,95"
+                                             AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional">
+                                    <BoxView Style="{StaticResource BoxViewForEntryBlack}" />
+                                    <BoxView Style="{StaticResource BoxViewForEntryBlack}" />
+                                </StackLayout>
+                            </AbsoluteLayout>-->
+                        <!--#endregion-->
+
+                        <Grid x:Name="GridOwner">
+                            <!-- Stack Owner Name Email-->
+                            <StackLayout x:Name="StackOwnerNameEmail">
+                                <!-- Name -->
+                                <Grid RowSpacing="5"
+                                      Margin="0,0,0,15"
+                                      IsVisible="true"
+                                      RowDefinitions="Auto,2">
+                                    <entry:CustomEntry x:Name="EntryName"
+                                                       Placeholder="Name"
+                                                       Opacity="0"
+                                                       TranslationY="15"
+                                                       Focused="CustomEntry_Focused"
+                                                       Unfocused="CustomEntry_Unfocused" />
+                                    <BoxView x:Name="LineEntryNameGray"
+                                             Style="{StaticResource BoxViewForEntryGray}" />
+                                    <BoxView x:Name="LineEntryNameBlack"
+                                             Style="{StaticResource BoxViewForEntryBlack}" />
+                                </Grid>
+                                <!-- Email -->
+                                <Grid RowSpacing="5"
+                                      IsVisible="true"
+                                      RowDefinitions="Auto,2">
+                                    <entry:CustomEntry x:Name="EntryEmail"
+                                                       Placeholder="Email"
+                                                       Opacity="0"
+                                                       TranslationY="15"
+                                                       Focused="CustomEntry_Focused"
+                                                       Unfocused="CustomEntry_Unfocused" />
+                                    <BoxView x:Name="LineEntryEmailGray"
+                                             Style="{StaticResource BoxViewForEntryGray}" />
+                                    <BoxView x:Name="LineEntryEmailBlack"
+                                             Style="{StaticResource BoxViewForEntryBlack}" />
+                                </Grid>
+                            </StackLayout>
+                            <!-- StackOwnerPassword -->
+                            
+                            <StackLayout x:Name="StackOwnerPassword"
+                                         IsVisible="false"
+                                         VerticalOptions="Fill">
+                                <!-- Password -->
+                                <Grid RowSpacing="5"
+                                      Margin="0,0,0,15"
+                                      RowDefinitions="Auto,2">
+                                    <entry:CustomEntry x:Name="EntryPassword"
+                                                       Placeholder="Create a password"
+                                                       Opacity="0"
+                                                       TranslationY="15"
+                                                       Focused="CustomEntry_Focused"
+                                                       Unfocused="CustomEntry_Unfocused" />
+                                    <BoxView x:Name="LineEntryPasswordGray"
+                                             Style="{StaticResource BoxViewForEntryGray}" />
+                                    <BoxView x:Name="LineEntryPasswordBlack"
+                                             Style="{StaticResource BoxViewForEntryBlack}" />
+                                </Grid>
+                                <!-- Repeat Password -->
+                                <Grid RowSpacing="5"
+                                      RowDefinitions="Auto,2">
+                                    <entry:CustomEntry x:Name="EntryRepeatPassword"
+                                                       Placeholder="Repeat your password"
+                                                       Opacity="0"
+                                                       TranslationY="15"
+                                                       Focused="CustomEntry_Focused"
+                                                       Unfocused="CustomEntry_Unfocused" />
+                                    <BoxView x:Name="LineEntryRepeatPasswordGray"
+                                             Style="{StaticResource BoxViewForEntryGray}" />
+                                    <BoxView x:Name="LineEntryRepeatPasswordBlack"
+                                             Style="{StaticResource BoxViewForEntryBlack}" />
+                                </Grid>
+                            </StackLayout>
+
+                        </Grid>
+
+                        <!-- -->
+
+                    </StackLayout>
+                    <!-- Buttons -->
+                    <StackLayout Orientation="Horizontal"
+                                 
+                                 Grid.Row="2"
+                                 AbsoluteLayout.LayoutBounds="1,0.85,1,60"
+                                 AbsoluteLayout.LayoutFlags="PositionProportional ,WidthProportional">
+                        <Button Text="{x:Static FontAwesome:IconFont.ArrowLeft}"
+                                VerticalOptions="Start"
+                                FontFamily="IconFont"
+                                Margin="10,0"
+                                FontSize="20"
+                                CornerRadius="10"
+                                BackgroundColor="White"
+                                Clicked="Button_Rearward" />
+                        <Button Text="{x:Static FontAwesome:IconFont.ArrowRight}"
+                                VerticalOptions="Start"
+                                FontFamily="IconFont"
+                                WidthRequest="120"
+                                Margin="10,0"
+                                FontSize="20"
+                                CornerRadius="10"
+                                TextColor="White"
+                                BackgroundColor="#21365C"
+                                Clicked="Button_Forward" />
+                    </StackLayout>
+
+                </Grid>
+            </ScrollView>
+            <!-- edge_alert -->
+            <StackLayout Style="{StaticResource StackNotification}"
+                         IsVisible="false"
+                         TranslationY="0"
+                         Grid.Row="0"
+                         BackgroundColor="Black">
+                <Label Text="{x:Static FontAwesome:IconFont.BellRing}"
+                       Style="{StaticResource ImageBellRing}"
+                       AnchorY="0"
+                       Rotation="5"/>
+                <StackLayout Padding="0,10,0,0">
+                    <Label Text="Title"
+                           FontSize="22"
+                           Style="{StaticResource LabelNotification}"/>
+                    <Label Text="Please fill in the blank fields"
+                           Style="{StaticResource LabelNotification}" />
+
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

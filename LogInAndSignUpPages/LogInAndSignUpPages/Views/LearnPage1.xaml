@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cc="clr-namespace:CC;assembly=CC.CircularSlider.Forms"
+             x:Class="LogInAndSignUpPages.Views.LearnPage1">
+    
+        <ContentPage.Padding>
+            <OnPlatform x:TypeArguments="Thickness">
+                <On Platform="iOS"
+                    Value="0, 20, 0, 0" />
+            </OnPlatform>
+        </ContentPage.Padding>
+    
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout>
+                <Grid VerticalOptions="CenterAndExpand">
+                    <Switch x:Name="switch1"
+                            Grid.Column="0"
+                            HorizontalOptions="Center" />
+
+                    <Switch x:Name="switch2"
+                            Grid.Column="1"
+                            HorizontalOptions="Center" />
+
+                    <Switch x:Name="switch3"
+                            Grid.Column="2"
+                            HorizontalOptions="Center" />
+
+                    <Switch x:Name="switch4"
+                            Grid.Column="3"
+                            HorizontalOptions="Center" />
+                </Grid>
+
+                <BoxView WidthRequest="100"
+                         HeightRequest="100"
+                         VerticalOptions="CenterAndExpand"
+                         HorizontalOptions="Center"
+                         Color="Blue">
+                    <BoxView.Triggers>
+                        <MultiTrigger TargetType="BoxView">
+                            <MultiTrigger.Conditions>
+                                <BindingCondition Binding="{Binding Source={x:Reference switch1}, 
+                                                            Path=IsToggled}"
+                                                  Value="True" />
+
+                                <BindingCondition Binding="{Binding Source={x:Reference switch2}, 
+                                                            Path=IsToggled}"
+                                                  Value="True" />
+
+                                <BindingCondition Binding="{Binding Source={x:Reference switch3}, 
+                                                            Path=IsToggled}"
+                                                  Value="True" />
+
+                                <BindingCondition Binding="{Binding Source={x:Reference switch4}, 
+                                                            Path=IsToggled}"
+                                                  Value="True" />
+                            </MultiTrigger.Conditions>
+
+                            <Setter Property="Color"
+                                    Value="Red" />
+                        </MultiTrigger>
+                    </BoxView.Triggers>
+                </BoxView>
+            </StackLayout>
+            <!-- CircularSlider plugn-->
+            <StackLayout Padding="50" BackgroundColor="Beige" IsVisible="false">
+                <cc:CircularSlider Arc="360"
+                                   KnobColor="Green"
+                                   Maximum="100"
+                                   Minimum="0"
+                                   PaddingAround="10"
+                                   Start="90"
+                                   TrackProgressColor="Blue"
+                                   VerticalOptions="FillAndExpand"
+                                   Value="50" />
+            </StackLayout>
+            <Label x:Name="MyLabel" Text="Mohamed"
+                   Padding="10" />
+            <BoxView x:Name="boxView"
+                     Color="Red" 
+                     WidthRequest="100"
+                     HeightRequest="100"
+                     HorizontalOptions="Start"
+                     VerticalOptions="Start"/>
+            <Button Text="Change color"
+                    Clicked="Button_Clicked" />
+            <AbsoluteLayout IsVisible="false" x:Name="absoluteLayout"
+                        SizeChanged="OnSizeChanged">
+            <Button x:Name="button"
+                    Text="Tap Me!"
+                    FontSize="Large"
+                    SizeChanged="OnSizeChanged"
+                    Clicked="OnButtonClicked" />
+        </AbsoluteLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
