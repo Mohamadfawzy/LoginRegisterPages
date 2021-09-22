@@ -112,6 +112,14 @@ namespace LogInAndSignUpPages.Views
         // Notification
         private async Task EdgeAlert(string text, string title = "Alarm")
         {
+            //var nav = App.Current.MainPage as Xamarin.Forms.NavigationPage;
+            //nav.BarBackgroundColor = Color.Green;
+            //nav.BarTextColor = Color.Yellow;
+            var d = DependencyService.Get<IEnvironment>();
+            d?.SetStatusBarColor(Color.Gray, true);
+            d?.SetNavigationBarColor(Color.Gray);
+
+
             var alertImage = new Label { Text = IconFont.BellRing, Style = Application.Current.Resources["ImageBellRing"] as Style };
             var stack = new StackLayout
             {
@@ -151,6 +159,8 @@ namespace LogInAndSignUpPages.Views
              {
                  taskCompletionSource.SetResult(c);
                  MainGrid.Children.Remove(stack);
+                 d?.SetStatusBarColor(Color.FromHex("#505a93"), true);
+                 d?.SetNavigationBarColor(Color.FromHex("#505a93"));
              });
 
             //await stack.TranslateTo(0, 0,700 ,easing: Easing.SinOut);

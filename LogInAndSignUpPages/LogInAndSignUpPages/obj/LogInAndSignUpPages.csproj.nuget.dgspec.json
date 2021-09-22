@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\_Projects\\SmallProjectXamarin\\LogInAndSignUpPages\\LogInAndSignUpPages\\LogInAndSignUpPages\\LogInAndSignUpPages.csproj": {}
+    "F:\\_Projects\\SmallProjectXamarin\\loginPage\\LogInAndSignUpPages\\LogInAndSignUpPages\\LogInAndSignUpPages.csproj": {}
   },
   "projects": {
-    "F:\\_Projects\\SmallProjectXamarin\\LogInAndSignUpPages\\LogInAndSignUpPages\\LogInAndSignUpPages\\LogInAndSignUpPages.csproj": {
+    "F:\\_Projects\\SmallProjectXamarin\\loginPage\\LogInAndSignUpPages\\LogInAndSignUpPages\\LogInAndSignUpPages.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\_Projects\\SmallProjectXamarin\\LogInAndSignUpPages\\LogInAndSignUpPages\\LogInAndSignUpPages\\LogInAndSignUpPages.csproj",
+        "projectUniqueName": "F:\\_Projects\\SmallProjectXamarin\\loginPage\\LogInAndSignUpPages\\LogInAndSignUpPages\\LogInAndSignUpPages.csproj",
         "projectName": "LogInAndSignUpPages",
-        "projectPath": "F:\\_Projects\\SmallProjectXamarin\\LogInAndSignUpPages\\LogInAndSignUpPages\\LogInAndSignUpPages\\LogInAndSignUpPages.csproj",
+        "projectPath": "F:\\_Projects\\SmallProjectXamarin\\loginPage\\LogInAndSignUpPages\\LogInAndSignUpPages\\LogInAndSignUpPages.csproj",
         "packagesPath": "C:\\Users\\Mohamed Fawzy\\.nuget\\packages\\",
-        "outputPath": "F:\\_Projects\\SmallProjectXamarin\\LogInAndSignUpPages\\LogInAndSignUpPages\\LogInAndSignUpPages\\obj\\",
+        "outputPath": "F:\\_Projects\\SmallProjectXamarin\\loginPage\\LogInAndSignUpPages\\LogInAndSignUpPages\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"

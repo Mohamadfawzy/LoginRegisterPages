@@ -1704,11 +1704,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\_Projects\\SmallProjectXamarin\\LogInAndSignUpPages\\LogInAndSignUpPages\\LogInAndSignUpPages.iOS\\LogInAndSignUpPages.iOS.csproj",
+      "projectUniqueName": "F:\\_Projects\\SmallProjectXamarin\\loginPage\\LogInAndSignUpPages\\LogInAndSignUpPages.iOS\\LogInAndSignUpPages.iOS.csproj",
       "projectName": "LogInAndSignUpPages.iOS",
-      "projectPath": "F:\\_Projects\\SmallProjectXamarin\\LogInAndSignUpPages\\LogInAndSignUpPages\\LogInAndSignUpPages.iOS\\LogInAndSignUpPages.iOS.csproj",
+      "projectPath": "F:\\_Projects\\SmallProjectXamarin\\loginPage\\LogInAndSignUpPages\\LogInAndSignUpPages.iOS\\LogInAndSignUpPages.iOS.csproj",
       "packagesPath": "C:\\Users\\Mohamed Fawzy\\.nuget\\packages\\",
-      "outputPath": "F:\\_Projects\\SmallProjectXamarin\\LogInAndSignUpPages\\LogInAndSignUpPages\\LogInAndSignUpPages.iOS\\obj\\",
+      "outputPath": "F:\\_Projects\\SmallProjectXamarin\\loginPage\\LogInAndSignUpPages\\LogInAndSignUpPages.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1729,8 +1729,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "F:\\_Projects\\SmallProjectXamarin\\LogInAndSignUpPages\\LogInAndSignUpPages\\LogInAndSignUpPages\\LogInAndSignUpPages.csproj": {
-              "projectPath": "F:\\_Projects\\SmallProjectXamarin\\LogInAndSignUpPages\\LogInAndSignUpPages\\LogInAndSignUpPages\\LogInAndSignUpPages.csproj"
+            "F:\\_Projects\\SmallProjectXamarin\\loginPage\\LogInAndSignUpPages\\LogInAndSignUpPages\\LogInAndSignUpPages.csproj": {
+              "projectPath": "F:\\_Projects\\SmallProjectXamarin\\loginPage\\LogInAndSignUpPages\\LogInAndSignUpPages\\LogInAndSignUpPages.csproj"
             }
           }
         }

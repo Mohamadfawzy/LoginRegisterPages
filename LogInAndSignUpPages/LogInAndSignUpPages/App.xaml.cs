@@ -11,6 +11,7 @@ namespace LogInAndSignUpPages
             InitializeComponent();
 
             MainPage = new NavigationPage(new MainPage());
+            //MainPage.FlowDirection = FlowDirection.RightToLeft;
         }
 
         protected override void OnStart()

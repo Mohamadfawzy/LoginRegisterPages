@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "b2OxywE7FnpS53ipxoVhHMnjO1kpyk2KjrmrOp/y8heN19XLKK7uLxnayYZvlcHd8smJqLhH05H0K/QlacrnXQ==",
+  "dgSpecHash": "PT4XoyRN57stXuuRRymjungcEUqF0BSRaqw3b//aMK8o1s1e8NeVaV2y1vGAz0fe125VBwd+HZ6bRNb6qjgO5w==",
   "success": true,
-  "projectFilePath": "F:\\_Projects\\SmallProjectXamarin\\LogInAndSignUpPages\\LogInAndSignUpPages\\LogInAndSignUpPages.iOS\\LogInAndSignUpPages.iOS.csproj",
+  "projectFilePath": "F:\\_Projects\\SmallProjectXamarin\\loginPage\\LogInAndSignUpPages\\LogInAndSignUpPages.iOS\\LogInAndSignUpPages.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mohamed Fawzy\\.nuget\\packages\\cc.circularslider.forms\\1.0.10\\cc.circularslider.forms.1.0.10.nupkg.sha512",
     "C:\\Users\\Mohamed Fawzy\\.nuget\\packages\\skiasharp\\2.80.2\\skiasharp.2.80.2.nupkg.sha512",

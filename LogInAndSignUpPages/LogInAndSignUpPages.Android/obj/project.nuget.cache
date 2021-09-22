@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EPY/1BQNl7mg0K9iJ4ehHpib0wyejTBXMVo/ZfFgIWWGPJZI0CrsC+StodoYS7Rzz2GTC1Y6yIzCB5gIKMoPQQ==",
+  "dgSpecHash": "520ZIMA+vI+orE3prKo2d3S658tbwYmw8qA1mQIZ4aiDwUD8QKPHf4WG1ODeQpJVg1k7OAn1GHwhgb6pstIkgQ==",
   "success": true,
-  "projectFilePath": "F:\\_Projects\\SmallProjectXamarin\\LogInAndSignUpPages\\LogInAndSignUpPages\\LogInAndSignUpPages.Android\\LogInAndSignUpPages.Android.csproj",
+  "projectFilePath": "F:\\_Projects\\SmallProjectXamarin\\loginPage\\LogInAndSignUpPages\\LogInAndSignUpPages.Android\\LogInAndSignUpPages.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mohamed Fawzy\\.nuget\\packages\\cc.circularslider.forms\\1.0.10\\cc.circularslider.forms.1.0.10.nupkg.sha512",
     "C:\\Users\\Mohamed Fawzy\\.nuget\\packages\\skiasharp\\2.80.2\\skiasharp.2.80.2.nupkg.sha512",

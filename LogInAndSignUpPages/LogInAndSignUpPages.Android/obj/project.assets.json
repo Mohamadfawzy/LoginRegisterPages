@@ -2571,11 +2571,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\_Projects\\SmallProjectXamarin\\LogInAndSignUpPages\\LogInAndSignUpPages\\LogInAndSignUpPages.Android\\LogInAndSignUpPages.Android.csproj",
+      "projectUniqueName": "F:\\_Projects\\SmallProjectXamarin\\loginPage\\LogInAndSignUpPages\\LogInAndSignUpPages.Android\\LogInAndSignUpPages.Android.csproj",
       "projectName": "LogInAndSignUpPages.Android",
-      "projectPath": "F:\\_Projects\\SmallProjectXamarin\\LogInAndSignUpPages\\LogInAndSignUpPages\\LogInAndSignUpPages.Android\\LogInAndSignUpPages.Android.csproj",
+      "projectPath": "F:\\_Projects\\SmallProjectXamarin\\loginPage\\LogInAndSignUpPages\\LogInAndSignUpPages.Android\\LogInAndSignUpPages.Android.csproj",
       "packagesPath": "C:\\Users\\Mohamed Fawzy\\.nuget\\packages\\",
-      "outputPath": "F:\\_Projects\\SmallProjectXamarin\\LogInAndSignUpPages\\LogInAndSignUpPages\\LogInAndSignUpPages.Android\\obj\\",
+      "outputPath": "F:\\_Projects\\SmallProjectXamarin\\loginPage\\LogInAndSignUpPages\\LogInAndSignUpPages.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2596,8 +2596,8 @@
       "frameworks": {
         "monoandroid11.0": {
           "projectReferences": {
-            "F:\\_Projects\\SmallProjectXamarin\\LogInAndSignUpPages\\LogInAndSignUpPages\\LogInAndSignUpPages\\LogInAndSignUpPages.csproj": {
-              "projectPath": "F:\\_Projects\\SmallProjectXamarin\\LogInAndSignUpPages\\LogInAndSignUpPages\\LogInAndSignUpPages\\LogInAndSignUpPages.csproj"
+            "F:\\_Projects\\SmallProjectXamarin\\loginPage\\LogInAndSignUpPages\\LogInAndSignUpPages\\LogInAndSignUpPages.csproj": {
+              "projectPath": "F:\\_Projects\\SmallProjectXamarin\\loginPage\\LogInAndSignUpPages\\LogInAndSignUpPages\\LogInAndSignUpPages.csproj"
             }
           }
         }

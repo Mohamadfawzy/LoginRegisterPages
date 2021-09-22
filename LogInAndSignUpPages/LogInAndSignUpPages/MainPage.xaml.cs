@@ -78,22 +78,19 @@ namespace LogInAndSignUpPages
                 var t1 = label.ScaleTo(1, 100, Easing.SpringIn);
                 var t2 = label.TranslateTo(0, 0, 100, Easing.SinInOut);
                 await Task.WhenAll(t1, t2);
-                label.TextColor = PlacholderColor;
+                
             }
             else
             {
                 if (entry.Keyboard == Keyboard.Email)
                 {
-                    if (EmailValidation(entry.Text))
-                    {
-                        frame.Border = new Border() { Color = Color.LightGray, Thickness = 2 };
-                    }
-                    else
+                    if (!EmailValidation(entry.Text))
                     {
                         frame.Border = new Border() { Color = Color.Red, Thickness = 2 };
                     }
                 }
             }
+            label.TextColor = PlacholderColor;
         }
         private void Button_Clicked(object sender, EventArgs e)
         {

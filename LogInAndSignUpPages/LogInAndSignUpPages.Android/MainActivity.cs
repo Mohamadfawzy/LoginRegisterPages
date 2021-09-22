@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.OS;
 using LogInAndSignUpPages.Droid.Renderers;
 using Android.Views;
+using Xamarin.Forms.Platform.Android;
 
 namespace LogInAndSignUpPages.Droid
 {
@@ -18,6 +19,10 @@ namespace LogInAndSignUpPages.Droid
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            // Add your edits 
+            Window.SetStatusBarColor(Xamarin.Forms.Color.FromHex("#505a93").ToAndroid());
+            Window.SetNavigationBarColor(Xamarin.Forms.Color.FromHex("#505a93").ToAndroid());
+            //
             LoadApplication(new App());
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
