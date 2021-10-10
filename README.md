@@ -20,7 +20,7 @@ Xamarin.Forms looking UI sample using the Animation.
 <html>
   <table style="width:100%">
     <tr>
-      <th>Touch Effect On Entry</th>
+      <th>Touch Effect On Label</th>
       <th>Multi Animation</th>
       <th>Edge Alert</th>
     </tr>
@@ -40,9 +40,10 @@ Packages used:
 
 Features:
 
-* MVVM
 * Animations.
 * Brushes.
 * Gradients.
 * Embedded Fonts
 * TouchEffect.
+* Renderers
+* MVVM
